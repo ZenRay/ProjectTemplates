@@ -1,4 +1,4 @@
-"""Top-level package for LogTemplate."""
+"""Top-level package for core."""
 
 __author__ = """RayZen"""
 __email__ = 'jake2011ren@gmail.com'
