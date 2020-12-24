@@ -1,0 +1,5 @@
+LOG_KEY = "Test"
+LOG_VALUE = "Just Test"
+
+SPARK_KEY = "SPARK"
+SPARK_VALUE = "NEW SPARK"
