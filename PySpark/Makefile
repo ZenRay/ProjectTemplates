@@ -45,6 +45,6 @@ test:
 build: clean
 	mkdir ./dist
 	zip -1rv dependence.zip ./libs ./utils -x libs/__pycache__/\* utils/__pycache__/\*
-	zip -1u dependence.zip ./settings.py ./spark.cfg ./__init__.py -X 
+	zip -1u dependence.zip ./settings.py ./spark.cfg ./__init__.py
 	mv dependence.zip ./dist
 	cp -R jobs ./dist
