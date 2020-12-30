@@ -22,7 +22,7 @@ records = [
 
 
 def createdf(spark, data):
-    df = spark.creatDataFrame(data)
+    df = spark.createDataFrame(data)
     df.coalesce(1).write.parquet("/tmp/test/employees", mode="overwrite")
 
     report = df.select(F.col('id'),
