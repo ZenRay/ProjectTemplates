@@ -22,7 +22,7 @@ records = [
 
 
 def createdf(spark, data):
-    df = spark.createDataFrame(data)
+    df = spark.creatDataFrame(data)
     df.coalesce(1).write.parquet("/tmp/test/employees", mode="overwrite")
 
     report = df.select(F.col('id'),
@@ -44,5 +44,5 @@ if __name__ == "__main__":
         .getOrCreate()
 
 
-    createdf(spark, records)
-    # job.execute(createdf, spark, records)
+    job = JobContext()
+    job.execute(createdf, spark, records)
