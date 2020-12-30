@@ -7,7 +7,7 @@ from pyspark.sql import Row
 from pyspark.sql import functions as F
 
 
-from PySpark.utils.context import JobContext
+from utils.context import JobContext
 
 records = [
     Row(id=1, first_name='Dan', second_name='Germain', floor=1),
