@@ -44,5 +44,5 @@ if __name__ == "__main__":
         .getOrCreate()
 
 
-    job = JobContext()
-    job.execute(createdf, spark, records)
+    createdf(spark, records)
+    # job.execute(createdf, spark, records)
