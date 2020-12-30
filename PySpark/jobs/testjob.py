@@ -36,11 +36,12 @@ def createdf(spark, data):
 
 if __name__ == "__main__":
     spark = SparkSession \
-            .builder \
-            .enableHiveSupport() \
-            .appName("test_context") \
-            .master("yarn") \
-            .getOrCreate()
+        .builder \
+        .enableHiveSupport() \
+        .appName("testApp") \
+        .master("yarn") \
+        .config("spark.executor.memory", "2G") \
+        .getOrCreate()
 
 
     job = JobContext()
