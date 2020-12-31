@@ -1,0 +1,21 @@
+基础说明
+=========
+
+项目的核心目录为 ``core``，由其提供核心功能，该 Package 下包括了以下 module:
+
+* config 元配置信息以及元配置类
+    * 元配置信息由 ``default.conf`` 提供，它是一个 ``module`` 路径信息和 ``section`` 两部分组成，后者是说明 module 是大类别，例如 **LOG**，后者是一个 ``option`` 值
+        ```{conf}
+        [LOG]
+        LOG_MODULE = core.config._default.log
+        ```
+        该文件基本用于指明配置存放位置，目前规划是将配置信息以 module 的方式存放在 ``core/config/_default`` 目录中
+    * 基本配置信息 ``_default`` 目录存放了不同的基本配置信息，例如 ``log.py`` 存放了 **log** 相关配置信息
+
+
+需要注意在应用端，基本配置信息例如日志配置默认情况下是区分为了生成阶段报告信息和开发阶段报告信息
+
+参考
+========
+1. [A Brief Tutorial On Sphinx and reStructuredText 0.1 documentation](https://iridescent.ink/HowToMakeDocs/Basic/SphinxExtensions.html)
+2. [Sphinx初尝 — Sphinx 使用手册](https://zh-sphinx-doc.readthedocs.io/en/latest/tutorial.html)
